@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket With Zain</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: silver;
+            color: black;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        .blog {
+            border: 1px solid white;
+            margin: 20px auto;
+            padding: 15px;
+            width: 80%;
+            border-radius: 8px;
+        }
+        .blog .content {
+            overflow: hidden;
+            max-height: 60px; /* Approx 3 lines */
+            transition: max-height 0.5s ease;
+        }
+        .blog.expanded .content {
+            max-height: 1000px; /* Fully expanded */
+        }
+        .see-more {
+            color: black;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        footer a {
+            color: blue;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <script>
+        function toggleBlog(id) {
+            const blog = document.getElementById(id);
+            blog.classList.toggle("expanded");
+            const seeMoreLink = blog.querySelector(".see-more");
+            if (blog.classList.contains("expanded")) {
+                seeMoreLink.textContent = "See Less";
+            } else {
+                seeMoreLink.textContent = "See More";
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>ARY Cricket</header>
+
+    <!-- Blog 1 -->
+    <div class="blog" id="blog1">
+        <h2>پی سی بی نے تین ملکی کرکٹ سیریز کراچی اور لاہور منتقل کردی</h2>
+        <div class="content">
+            <p>پاکستان کرکٹ بورڈ (پی سی بی) نے تین ملکی کرکٹ سیریز کے میچز کراچی اور لاہور منتقل کرنے کا فیصلہ</p>
+            <p>کیا ہے۔ یہ اقدام اپ گریڈ شدہ مقامات کی تیاری اور کھلاڑیوں، آفیشلز اور شائقین کو عالمی معیار کا تجربہ فراہم کرنے کے لیے کیا گیا ہے۔</p>
+            <p>17-01-2025</p>
+        </div>
+        <span class="see-more" onclick="toggleBlog('blog1')">See More</span>
+    </div>
+
+    <!-- Blog 2 -->
+    <div class="blog" id="blog2">
+        <h2>پاکستان بمقابلہ ویسٹ انڈیز</h2>
+        <div class="content">
+            <p>پاکستان اور ویسٹ انڈیز کے درمیان دو ٹیسٹ میچوں کی سیریز کا پہلا میچ </p>
+            <p>پہلے دن کی نمایاں جھلکیاں:
+
+شان مسعود 11 رنز بنا کر آؤٹ ہوئے۔
+بابر اعظم 8 رنز پر پویلین لوٹ گئے۔
+محمد ہریرہ نے اپنے ڈیبیو میچ میں 6 رنز بنائے۔
+کامران غلام 5 رنز کا حصہ ڈال سکے۔
+ویسٹ انڈیز کی جانب سے جیڈن سیلز نے 3 وکٹیں حاصل کیں، جبکہ گڈاکیش موتی نے ایک کھلاڑی کو آؤٹ کیا۔ </p>
+            <p>17-01-2025</p>
+        </div>
+        <span class="see-more" onclick="toggleBlog('blog2')">See More</span>
+    </div>
+
+    <!-- Add more blogs as needed -->
+
+    <footer>
+        <p>Follow me on:</p>
+        <a href=https://youtube.com/@ary_cricket.?si=GdRu8WFrsIlneMNu target="_blank">YouTube</a>
+        <a href="https://www.instagram.com" target="_blank">Instagram</a>
+        <a href="https://www.tiktok.com" target="_blank">TikTok</a>
+        <a href="https://www.facebook.com" target="_blank">Facebook</a>
+    </footer>
+</body>
+</html>
